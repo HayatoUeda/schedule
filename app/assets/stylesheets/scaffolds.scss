@@ -1,0 +1,120 @@
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+body, p, ol, ul, td {
+  font-family: Hiragino Kaku Gothic ProN;
+  font-size: 12px;
+  line-height: 18px; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header{
+  width: 100%;
+  padding: 10px;
+  margin: 0px;
+  background: #c52f42;
+  color: #fff;
+}
+
+.main_container {
+  margin: 40px 15px;
+}
+
+footer{
+  width: 100%;
+  padding: 10px;
+  margin-top: auto;
+  background: #c52f42;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+table {
+  box-sizing: border-box;
+  border-color: #666;
+  border-collapse: collapse;
+}
+
+table th {
+  background-color: #ffdfdf;
+  padding: 10px 20px;
+  border: solid 1px black;
+}
+
+table td {
+  background-color: #f1c8c861;
+  padding: 10px 20px;
+  text-align: center;
+  border: solid 1px black;
+}
+
+.notice {
+  border-color: #ccf;
+  padding: 5px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #000; }
+
+a:visited {
+  color: #666; }
+
+a:hover {
+  color: #fff;
+  background-color: #000; }
+
+div.field,
+div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff; }
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square; }
+
+label {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+  <h2>スケジュール詳細</h2>
+
+  <table>
+  <tr>
+    <th>タイトル</th>
+    <td><%= @task.title %></td>
+  </tr>
+
+  <tr>
+    <th>開始日</th>
+    <td><%= @task.startdate.strftime('%Y/%m/%d') %></td>
+  </tr>
+
+  <tr>
+    <th>終了日</th>
+    <td><%= @task.enddate.strftime('%Y/%m/%d') %></td>
+  </tr>
+
+  <tr>
+    <th>終日</th>
+    <td>
+      <% if @task.allday == true %>
+      ○
+      <% elsif @task.allday == false %>
+
+      <% end %>
+    </td>
+  </tr>
+
+  <tr>
+    <th>メモ</th>
+    <td><%= @task.memo %></td>
+  </tr>
+  </table>
+
+  <ul>
+    <li><%= link_to 'スケジュール一覧に戻る', tasks_path %></li>
+    <li><%= link_to 'スケジュールを編集する', edit_task_path(@task) %></li>
+    <li><%= link_to 'スケジュールを削除する', @task, method: :delete, data: { confirm: '本当に削除しますか?' } %></li>
+  </ul>

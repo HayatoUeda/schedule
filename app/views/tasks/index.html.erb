@@ -1,0 +1,41 @@
+<h2>スケジュール一覧</h2>
+<p id="notice"><%= notice %></p>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>タイトル</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>終日</th>
+        <th>スケジュール更新日時</th>
+        <th>確認</th>
+        <th>更新</th>
+        <th>削除</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tasks.each do |task| %>
+        <tr>
+          <td><%= task.id %></td>
+          <td><%= task.title %></td>
+          <td><%= task.startdate.strftime('%Y/%m/%d') %></td>
+          <td><%= task.enddate.strftime('%Y/%m/%d') %></td>
+          <td>
+            <% if task.allday == true %>
+            ○
+            <% elsif task.allday == false %>
+
+            <% end %>
+          </td>
+          <td><%= task.updated_at.strftime('%Y/%m/%d %H:%M') %></td>
+          <td><%= link_to '確認', task %></td>
+          <td><%= link_to '更新', edit_task_path(task) %></td>
+          <td><%= link_to '削除', task, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <p>
+    <%= link_to 'スケジュール新規作成', new_task_path %>
+  </p>
